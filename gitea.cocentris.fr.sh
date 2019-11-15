@@ -37,9 +37,6 @@ read -p "Enter the VM version date YYYY-MM-DD:"  DATE
 		mv nginx.conf /etc/nginx/;
 		mkdir /opt/archiva/
 		mv archiva/* /opt/archiva/;
-		cd /opt/archiva/apache-archiva-2.2.4/bin/;
-		./archiva start ;
-		cd /root/gitea.cocentris.fr"$DATE"/;
   		apt install git -y;
 		adduser --system --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git  git;
 		wget https://github.com/go-gitea/gitea/releases/download/v1.9.5/gitea-1.9.5-linux-amd64;
