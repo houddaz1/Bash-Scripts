@@ -1,0 +1,4 @@
+le script "serverscript.sh" c'est pour configurer un serveur openVPN , il doit étre lancé sur la machine serveur .
+ 
+les scripts clientscript.sh et make_config.sh c'est pour creer et configurer des clients . 
+clientscript.sh doit étre lancé sur la machine client, il va créer les fichiers necessaires au client (sur la machine serveur) et make_config.sh (doit étre lancé sur la machine serveur) va asselbler tous ces fichiers dans un méme fichier  "nom".ovpn , ce dernier doit étre transferé à la machine client pour lancé openVPN avec (openvpn --config "nom".ovpn)
