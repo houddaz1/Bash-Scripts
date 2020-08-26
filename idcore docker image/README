@@ -1,0 +1,25 @@
+-le fichier com.cocentris.id.core.jar est le fichier de l'application idcore .
+-le fichier idcore.sql contient les données pour la base de données idcore.
+-le fichier dockerfile est le fichier de build de l'image de l'application idcore : l'image contient : 
+			-Ubuntu 20.04
+			-java 13
+			-postgresql 12
+-le fichier dockerfile va executer des script lors de build de l'image : 
+	-DBidcore.sh : c'est pour creer l'utilisateur idcore et la base de données idcore .
+	-script.sh c'est pour :	-lancer le serveur postgresql 
+				-lancer le script DBidcore.sh (pour creer la base et l'utilisateur)
+				-importer les données de base idcore a partir du fichier idcore.sql 
+				-arreter le serveur postgresql (on doit l'arreter pour pouvoir le lancer lors du lancement du container d'une façon optimale,sinon si on ne l'arrete pas , on va avoir des problémes lors du lancement du container).
+	-ex.sh c'est le script qui va se lancer lors du lancement du container , il va lancer le serveur postgrsql et puis l'application idcore.
+-le script dockerregcli.sh c'est pour : 
+		-configurer la machine pour pouvoir importer l'image à partir du cocentris.registry.com (le registre docker local).
+		-creer un volume volume1 ou on va stocker les données du container pour ne pas les perdre lors de l'arret du container.
+
+
+-POUR IMPORTER L'IMAGE :
+sudo docker pull cocentris.registry.com:5000/ahmed/idcoreapp:v1
+
+-POUR LANCER UN CONTAINER DE L'IMAGE(d'une façon ineteractive):
+sudo docker run -it -p 9090:8080 -p 5432:5432 -v volume1 cocentris.registry.com:5000/ahmed/idcoreapp:v1
+
+

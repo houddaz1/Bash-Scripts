@@ -4,5 +4,4 @@ sudo echo "{
    "insecure-registries" : ["cocentris.registry.com:5000"]
 }" > /etc/docker/daemon.json
 
-sudo docker pull docker-registry:5000/ahmed/idcoreapp:v1
-sudo docker run -it -p 9090:8080 -p 5432:5432 docker-registry:5000/ahmed/idcoreapp:v1
+sudo docker volume create volume1 
