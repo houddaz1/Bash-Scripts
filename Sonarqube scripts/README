@@ -1,0 +1,9 @@
+-ces script c'est pour configurer NGNIX comme un reverser proxy pour sonarqube (qui va auusi etre installé et configuré avec ce script)
+
+-pour faire la configuration on doit lancer le script sonarscript.sh qui ba installer java 11 ,  postgresql , sonarqube et NGNIX et va faire la configuration des ces service, il va lui meme executer le script postgresscript.sh qui va configurer la partie de la base de données postgesql(user,database).
+
+-dans le fichier sonarscript on doit modifier le chemin du script postgresscript.sh dans la ligne : "/bin/su -s /bin/bash -c "chemin/postgresscript.sh" postgres" et donner le chemin exacte du fichier postgresscript.sh
+
+-le service va utiliser le port 9000 ;
+-adresse : http://127.0.0.1:9000  
+

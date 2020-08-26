@@ -1,0 +1,6 @@
+-Ce repertoire contient des script pour configurer et implementer quelques service : 
+-le Dossier "idcore docker image" contient des scripts pour creer une image docker de l'application idcore.
+-le dossier "local docker registry" contient les scripts pour creer un regsitre docker local .
+-le dossier "OpenVPN scripts" contient les scripts pour creer et configurer le VPN (configuration des clients et du serveur).
+-le dossier "Sonarqube scripts" contient les scripts de configuration de NGINX comme un reverse proxy de sonarqube.
+

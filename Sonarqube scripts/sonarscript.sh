@@ -23,7 +23,7 @@ sudo apt install postgresql postgresql-contrib
 sudo systemctl enable postgresql.service
 sudo systemctl start  postgresql.service
 #run postscript as postgres user
-/bin/su -s /bin/bash -c "/home/ahmed/Bureau/bashscript/postgresscript.sh" postgres
+/bin/su -s /bin/bash -c "chemin/postgresscript.sh" postgres
 
 
 #Restart & Check PostgreSQL DB Service Status again
