@@ -1,3 +1,4 @@
+# <infrascripts> 
 -Ce repertoire contient des script pour configurer et implementer quelques service : 
 -le Dossier "idcore docker image" contient des scripts pour creer une image docker de l'application idcore.
 -le dossier "local docker registry" contient les scripts pour creer un regsitre docker local .
